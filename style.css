@@ -1,0 +1,65 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif; /* Optional: Define a font family */
+  }
+  
+  h1 {
+    font-size: 150%; /* Set font size for heading */
+    text-align: center; /* Center the heading */
+    margin-top: 20px; /* Add spacing above the heading */
+  }
+  
+  /* Styles for each section */
+  .section {
+    border: 1px solid black;
+    margin-bottom: 20px; /* Vertical spacing between sections */
+    padding: 20px;
+    background-color: #cf6e96; /* Set a background color for sections */
+    position: relative; /* Needed for absolute positioning of title */
+  }
+  
+  /* Styles for section titles */
+  .section-title {
+    position: absolute;
+    top: 0%;
+    left:0%;
+    background-color: #566d8b; /* Set a unique background color for section titles */
+    padding: 5px 10px;
+    border: 1px solid black;
+  }
+  
+  /* Responsive layout using media queries */
+  /* Desktop view */
+  @media screen and (min-width: 992px) {
+    .section {
+      width: 33.33%; /* Each section takes up one-third of the screen */
+      float: left;
+    }
+  }
+  
+  /* Tablet view */
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .section {
+      width: 50%; /* Each of the first two sections take up half of the screen */
+      float: left;
+    }
+    .section:nth-child(3) {
+      width: 100%; /* The third section takes up the entire row */
+      clear: both;
+    }
+  }
+  
+  /* Mobile view */
+  @media screen and (max-width: 767px) {
+    .section {
+      width: 100%; /* Each section takes up the entire row */
+    }
+  }
+  
